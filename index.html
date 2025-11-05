@@ -4,67 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <style>
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333333;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .radio-school,
+        .checkbox-colors {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .radio-school label,
+        .checkbox-colors label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .required {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <form action="#" method="POST">
-        <h1>Registration Form</h1>
-        <h2>Personal Information</h2>
-        <div class="personal-info">
-            <label for="first">First Name <span class="required">*</span></label>
-            <input type="text" id="first" name="first" required>
-            <label for="last">Last Name <span class="required">*</span></label>
-            <input type="text" id="last" name="last" required><br>
-            <label for="street">Street Address</label>
-            <input type="text" id="street" name="street"><br>
-            <label for="city">City</label>
-            <input type="text" id="city" name="city"><br>
-            <label for="state">State <span class="required">*</span></label>
-            <input type="text" id="state" name="state" required><br>
-            <label for="zip">Zip Code</label>
-            <input type="text" id="zip" name="zip"><br>
-            <label for="email">Email Address <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required><br>
-            <label for="phone">Phone Number <span class="required">*</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required><br>
-        </div>
-        <h2>Favorite Colors</h2>
-        <p>Select all colors you like (you may choose multiple)</p>
-        <div class="checkbox-colors">
-            <input type="checkbox" id="red" name="colors" value="red">
-            <label for="red">Red</label><br>
-            <input type="checkbox" id="orange" name="colors" value="orange">
-            <label for="orange">Orange</label><br>
-            <input type="checkbox" id="yellow" name="colors" value="yellow">
-            <label for="yellow">Yellow</label><br>
-            <input type="checkbox" id="green" name="colors" value="green">
-            <label for="green">Green</label><br>
-            <input type="checkbox" id="blue" name="colors" value="blue">
-            <label for="blue">Blue</label><br>
-            <input type="checkbox" id="indigo" name="colors" value="indigo">
-            <label for="indigo">Indigo</label><br>
-            <input type="checkbox" id="violet" name="colors" value="violet">
-            <label for="violet">Violet</label><br>
-        </div>
-        <h2>Home School District</h2>
-        <p>Select your home school district (choose one)</p>
-        <div class="radio-school">
-            <input type="radio" id="canton" name="schoolDistrict" value="canton">
-            <label for="canton">Canton</label><br>
-            <input type="radio" id="potsdam" name="schoolDistrict" value="potsdam">
-            <label for="potsdam">Potsdam</label><br>
-            <input type="radio" id="massena" name="schoolDistrict" value="massena">
-            <label for="massena">Massena</label><br>
-            <input type="radio" id="norwood-norfolk" name="schoolDistrict" value="norwood-norfolk">
-            <label for="norwood-norfolk">Norwood-Norfolk</label><br>
-            <input type="radio" id="parishville-hopkinton" name="schoolDistrict" value="parishville-hopkinton">
-            <label for="parishville-hopkinton">Parishville-Hopkinton</label><br>
-            <input type="radio" id="colton-pierrepont" name="schoolDistrict" value="colton-pierrepont">
-            <label for="colton-pierrepont">Colton-Pierrepont</label><br>
-            <input type="radio" id="brasher-falls" name="schoolDistrict" value="brasher-falls">
-            <label for="brasher-falls">Brasher Falls</label><br>
-        </div>
-        <br><br>
-        <input type="submit" value="Submit Registration">
-    </form>
+    <div class="form">
+        <form action="#" method="POST">
+            <h1>Registration Form</h1>
+            <h2>Personal Information</h2>
+            <div class="personal-info">
+                <label for="first">First Name <span class="required">*</span></label>
+                <input type="text" id="first" name="first" required>
+                <label for="last">Last Name <span class="required">*</span></label>
+                <input type="text" id="last" name="last" required><br>
+                <label for="street">Street Address</label>
+                <input type="text" id="street" name="street"><br>
+                <label for="city">City</label>
+                <input type="text" id="city" name="city"><br>
+                <label for="state">State <span class="required">*</span></label>
+                <input type="text" id="state" name="state" required><br>
+                <label for="zip">Zip Code</label>
+                <input type="text" id="zip" name="zip"><br>
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required><br>
+            </div>
+            <h2>Favorite Colors</h2>
+            <p>Select all colors you like (you may choose multiple)</p>
+            <div class="checkbox-colors">
+                <input type="checkbox" id="red" name="colors" value="red">
+                <label for="red">Red</label><br>
+                <input type="checkbox" id="orange" name="colors" value="orange">
+                <label for="orange">Orange</label><br>
+                <input type="checkbox" id="yellow" name="colors" value="yellow">
+                <label for="yellow">Yellow</label><br>
+                <input type="checkbox" id="green" name="colors" value="green">
+                <label for="green">Green</label><br>
+                <input type="checkbox" id="blue" name="colors" value="blue">
+                <label for="blue">Blue</label><br>
+                <input type="checkbox" id="indigo" name="colors" value="indigo">
+                <label for="indigo">Indigo</label><br>
+                <input type="checkbox" id="violet" name="colors" value="violet">
+                <label for="violet">Violet</label><br>
+            </div>
+            <h2>Home School District</h2>
+            <p>Select your home school district (choose one)</p>
+            <div class="radio-school">
+                <input type="radio" id="canton" name="schoolDistrict" value="canton">
+                <label for="canton">Canton</label><br>
+                <input type="radio" id="potsdam" name="schoolDistrict" value="potsdam">
+                <label for="potsdam">Potsdam</label><br>
+                <input type="radio" id="massena" name="schoolDistrict" value="massena">
+                <label for="massena">Massena</label><br>
+                <input type="radio" id="norwood-norfolk" name="schoolDistrict" value="norwood-norfolk">
+                <label for="norwood-norfolk">Norwood-Norfolk</label><br>
+                <input type="radio" id="parishville-hopkinton" name="schoolDistrict" value="parishville-hopkinton">
+                <label for="parishville-hopkinton">Parishville-Hopkinton</label><br>
+                <input type="radio" id="colton-pierrepont" name="schoolDistrict" value="colton-pierrepont">
+                <label for="colton-pierrepont">Colton-Pierrepont</label><br>
+                <input type="radio" id="brasher-falls" name="schoolDistrict" value="brasher-falls">
+                <label for="brasher-falls">Brasher Falls</label><br>
+            </div>
+            <br><br>
+            <input type="submit" value="Submit Registration">
+        </form>
+    </div>
 </body>
 </html>
