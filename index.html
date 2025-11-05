@@ -22,6 +22,10 @@
             color: #333333;
             text-align: center;
         }
+        h2 {
+            color: #444444;
+            text-align: center;
+        }
         label {
             display: block;
             margin-top: 15px;
@@ -31,7 +35,9 @@
         }
         input[type="text"],
         input[type="email"],
-        input[type="tel"] {
+        input[type="tel"],
+        select,
+        textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #dddddd;
@@ -77,8 +83,8 @@
     <div class="form">
         <form action="#" method="POST">
             <h1>Registration Form</h1>
-            <h2>Personal Information</h2>
-            <div class="personal-info">
+            <fieldset class="personal-info">
+                <legend>Personal Information</legend>
                 <label for="first">First Name <span class="required">*</span></label>
                 <input type="text" id="first" name="first" required>
                 <label for="last">Last Name <span class="required">*</span></label>
@@ -95,10 +101,10 @@
                 <input type="email" id="email" name="email" required><br>
                 <label for="phone">Phone Number <span class="required">*</span></label>
                 <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required><br>
-            </div>
-            <h2>Favorite Colors</h2>
-            <p>Select all colors you like (you may choose multiple)</p>
-            <div class="checkbox-colors">
+            </fieldset>
+            <fieldset class="checkbox-colors">
+                <legend>Favorite Colors</legend>
+                <p>Select all colors you like (you may choose multiple)</p>
                 <input type="checkbox" id="red" name="colors" value="red">
                 <label for="red">Red</label><br>
                 <input type="checkbox" id="orange" name="colors" value="orange">
@@ -113,25 +119,37 @@
                 <label for="indigo">Indigo</label><br>
                 <input type="checkbox" id="violet" name="colors" value="violet">
                 <label for="violet">Violet</label><br>
-            </div>
-            <h2>Home School District</h2>
-            <p>Select your home school district (choose one)</p>
-            <div class="radio-school">
-                <input type="radio" id="canton" name="schoolDistrict" value="canton">
+            </fieldset>
+            <fieldset class="radio-school">
+                <legend>Home School District <span class="required">*</span></legend>
+                <p>Select your home school district (choose one)</p>
+                <input type="radio" id="canton" name="schoolDistrict" value="canton" required>
                 <label for="canton">Canton</label><br>
-                <input type="radio" id="potsdam" name="schoolDistrict" value="potsdam">
+                <input type="radio" id="potsdam" name="schoolDistrict" value="potsdam" required>
                 <label for="potsdam">Potsdam</label><br>
-                <input type="radio" id="massena" name="schoolDistrict" value="massena">
+                <input type="radio" id="massena" name="schoolDistrict" value="massena" required>
                 <label for="massena">Massena</label><br>
-                <input type="radio" id="norwood-norfolk" name="schoolDistrict" value="norwood-norfolk">
+                <input type="radio" id="norwood-norfolk" name="schoolDistrict" value="norwood-norfolk" required>
                 <label for="norwood-norfolk">Norwood-Norfolk</label><br>
-                <input type="radio" id="parishville-hopkinton" name="schoolDistrict" value="parishville-hopkinton">
+                <input type="radio" id="parishville-hopkinton" name="schoolDistrict" value="parishville-hopkinton" required>
                 <label for="parishville-hopkinton">Parishville-Hopkinton</label><br>
-                <input type="radio" id="colton-pierrepont" name="schoolDistrict" value="colton-pierrepont">
+                <input type="radio" id="colton-pierrepont" name="schoolDistrict" value="colton-pierrepont" required>
                 <label for="colton-pierrepont">Colton-Pierrepont</label><br>
-                <input type="radio" id="brasher-falls" name="schoolDistrict" value="brasher-falls">
+                <input type="radio" id="brasher-falls" name="schoolDistrict" value="brasher-falls" required>
                 <label for="brasher-falls">Brasher Falls</label><br>
-            </div>
+            </fieldset>
+            <fieldset class="grade">
+                <legend>Grade Level</legend>
+                <select name="grade" id="grade">
+                <option value="">-- Select a Grade Level --</option>
+                <option value="9">9th Grade</option>
+                <option value="10">10th Grade</option>
+                <option value="11">11th Grade</option>
+                <option value="12">12th Grade</option>
+            </select>
+            </fieldset>
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts..."></textarea>
             <br><br>
             <input type="submit" value="Submit Registration">
         </form>
